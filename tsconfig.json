@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "outDir": "./dist",
+        "jsx": "react",
+        "lib": ["dom", "es5", "es6"]
+    },
+    "include": [
+        "src/server/**/*.ts",
+        "src/server/**/*.tsx",
+        "/src/common/**/*.ts"
+    ]
+}

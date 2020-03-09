@@ -1,0 +1,6 @@
+/.idea/
+/.git/
+/logs/
+/public/
+/dist/
+/node_modules/
