@@ -12,15 +12,16 @@ It is also not just a layered architecture sample but also includes testing, moc
 ## Tech Used
 
 The following is what I used in this project.
-* React
-* Redux
-* NodeJs
-* Typescript
-* Webpack
-* Jest
-  - To test the server
-* Nock
-   - Mocking out HTTP requests on the server
+
+-   React
+-   Redux
+-   NodeJs
+-   Typescript
+-   Webpack
+-   Jest
+    -   To test the server
+-   Nock
+    -   Mocking out HTTP requests on the server
 
 ## Project Layout
 
@@ -41,10 +42,23 @@ This serves up client, as well as serving as an API layer than can be accessed w
 
 ## Execution and Tests
 
-* npm run start
-    - Will build the client and server and start the application
-* npm run test
-        Will run the jest tests on the server
+-   npm run start
+    -   Will build the client and server and start the application
+-   npm run test
+    -   Will run the jest tests on the server
 
+Once running the following urls can be hit
+
+### Client related
+
+-   localhost:8080/basicapp
+    -   brings up the UI
+-   localhost:8080/basicapp/about
+    -   displays the about screen for the application
+
+### Server Related (API)
+
+-   localhost:8080/basicapp/webapi
+    -   displays JSON giving the overall version of the application as defined in package.json
 
 ## Features

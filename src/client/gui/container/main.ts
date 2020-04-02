@@ -1,10 +1,11 @@
 import { Main as MainComponent } from '../component/main'
 import { connect } from 'react-redux'
 import { AppState } from '../../presentation'
+import { isValidAuthToken } from '../../../common'
 
 const mapStateToProps = (state: AppState) => {
     return {
-        authorized: state.authorized, //get from state
+        authorized: isValidAuthToken(state.authorizationToken),
     }
 }
 

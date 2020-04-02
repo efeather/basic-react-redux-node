@@ -1,19 +1,26 @@
-import { RoutePath } from '../common'
+import { isValidAuthToken, RoutePath } from '../common'
 import * as express from 'express'
 import * as path from 'path'
 import * as compression from 'compression'
 import { Request, Response } from 'express'
 
+const HttpStatus = require('http-status-codes')
 const app = express()
 
 const packageJSON = require(path.join(__dirname, '..', '..', 'package.json'))
 
 //Test the server directly just show version from package.json
 app.get(RoutePath.webAPI, (req: Request, res: Response) => {
-    res.json({
-        name: packageJSON.name,
-        version: packageJSON.version,
-    })
+    const authToken: string | null = req.header('Authorization')
+
+    if (!isValidAuthToken(authToken)) {
+        res.status(HttpStatus.UNAUTHORIZED).send({ error: 'bad Auth Token' })
+    } else {
+        res.json({
+            name: packageJSON.name,
+            version: packageJSON.version,
+        })
+    }
 })
 
 const publicDir = path.join(__dirname, '..', '..', 'public')

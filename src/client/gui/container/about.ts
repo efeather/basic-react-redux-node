@@ -3,7 +3,9 @@ import { connect } from 'react-redux'
 import { AppState } from '../../presentation'
 
 const mapStateToProps = (state: AppState) => {
-    return {}
+    return {
+        authorizationToken: state.authorizationToken,
+    }
 }
 
 export const About = connect(mapStateToProps)(AboutComponent)

@@ -1,22 +1,29 @@
-import { ConnectedRouter } from 'connected-react-router'
+import { ConnectedRouter, routerMiddleware } from 'connected-react-router'
 import { Main } from './gui/container/main'
 import * as ReactDOM from 'react-dom'
 import * as React from 'react'
 import { createBrowserHistory, History } from 'history'
 import { RoutePath } from '../common'
-import { createStore, Store } from 'redux'
+import { applyMiddleware, createStore, Store } from 'redux'
 import { createReducer } from './presentation/reducers'
 import { Provider } from 'react-redux'
 import { AppState } from './presentation'
+import { composeWithDevTools } from 'redux-devtools-extension'
+import thunk from 'redux-thunk'
 
 declare global {
     interface Window {
-        reduxStore: Store<AppState>
+        reduxStore: Store<Partial<AppState>>
     }
 }
 const history: History = createBrowserHistory({ basename: RoutePath.base })
-
-const store = createStore(createReducer(history))
+const middleware = [thunk, routerMiddleware(history)]
+const enhancers: any = []
+const store = createStore(
+    createReducer(history),
+    { authorizationToken: 'Basic DemoOnlyUseOAuth2' },
+    composeWithDevTools(applyMiddleware(...middleware), ...enhancers)
+)
 
 window.reduxStore = store
 

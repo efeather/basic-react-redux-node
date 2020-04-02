@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const distPath = path.join(__dirname, 'public')
 
 module.exports = {
+    mode: 'none',
     entry: {
         main: './src/client/index.tsx',
     },

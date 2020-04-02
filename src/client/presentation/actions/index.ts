@@ -1,1 +1,1 @@
-export * from './authorized-action'
+export * from './authorizationToken-action'
