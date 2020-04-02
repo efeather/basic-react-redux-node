@@ -22,6 +22,8 @@ The following is what I used in this project.
     -   To test the server
 -   Nock
     -   Mocking out HTTP requests on the server
+- Fetch
+    - for requests from client to the server    
 
 ## Project Layout
 
