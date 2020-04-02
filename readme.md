@@ -1,1 +1,0 @@
-Bootstrapped NodeJs React Project
