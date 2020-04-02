@@ -22,8 +22,8 @@ The following is what I used in this project.
     -   To test the server
 -   Nock
     -   Mocking out HTTP requests on the server
-- Fetch
-    - for requests from client to the server    
+-   Fetch
+    -   for requests from client to the server
 
 ## Project Layout
 
@@ -61,6 +61,7 @@ Once running the following urls can be hit
 ### Server Related (API)
 
 -   localhost:8080/basicapp/webapi
-    -   displays JSON giving the overall version of the application as defined in package.json
+    -   displays JSON giving the overall version of the application as defined in package.json.  Must pass
+    the correctauthtoken in the header.  Hardcoded in the validate token function.
 
 ## Features
