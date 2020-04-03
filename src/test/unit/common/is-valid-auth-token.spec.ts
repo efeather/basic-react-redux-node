@@ -1,6 +1,6 @@
 import { expect } from 'chai'
 import 'mocha'
-import { isValidAuthToken } from '../../common/is-valid-auth-token'
+import { isValidAuthToken } from '../../../common/is-valid-auth-token'
 
 describe('Autothorization Tests', () => {
     describe('Null token', () => {

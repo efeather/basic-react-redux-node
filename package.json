@@ -9,7 +9,7 @@
         "build-client": "webpack",
         "build": "npm run format && npm run build-server && npm run build-client",
         "start": "npm run build && node ./dist/server/index.js",
-        "mocha-test": "mocha -r ts-node/register src/test/unit/*.spec.ts",
+        "mocha-test": "mocha -r ts-node/register src/test/unit/**/*.spec.ts",
         "jest-test": "jest --passWithNoTests"
     },
     "dependencies": {
