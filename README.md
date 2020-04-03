@@ -18,16 +18,13 @@ The following is what I used in this project.
 -   NodeJs
 -   Typescript
 -   Webpack
--   Jest @TODO
-    -   To test the server
--   Nock @TODO
-    -   Mocking out HTTP requests on the server
 -   Fetch
     -   for requests from client to the server
 -   Mocha
     -   Unit tests
 -   Chai
     -   Assert framework for use with mocha
+-   Cucumber
 
 ## Project Layout
 
