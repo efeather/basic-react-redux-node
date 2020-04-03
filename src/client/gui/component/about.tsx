@@ -21,5 +21,9 @@ export const About: React.FunctionComponent<Props> = ({
         getVersion()
     }, [])
 
-    return <div id={ElementId.About}>The Version is {version}</div>
+    return (
+        <div id={ElementId.About}>
+            The Version is: <text> {version} </text>
+        </div>
+    )
 }

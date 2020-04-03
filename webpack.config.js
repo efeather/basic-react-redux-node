@@ -33,10 +33,11 @@ module.exports = {
                 use: 'polymer-webpack-loader',
                 exclude: [
                     path.resolve(__dirname, 'index.html'),
-                    './src/**/*.spec.ts',
-                    './src/**/*.spec.tsx',
-                    'node_modules',
-                    './dist/'],
+                    path.resolve(__dirname, 'src/**/*.spec.ts'),
+                    path.resolve(__dirname, 'src/**/*.spec.tsx'),
+                    path.resolve(__dirname, 'node_modules'),
+                    path.resolve(__dirname, 'dist/'),
+                ],
             },
             {
                 test: /\.css$/,

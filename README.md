@@ -54,7 +54,6 @@ Unit tests
 
 this is the E2E tests for both the client and the server (API)
 
-
 ## Execution and Tests
 
 -   npm run start
