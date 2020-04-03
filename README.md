@@ -18,16 +18,20 @@ The following is what I used in this project.
 -   NodeJs
 -   Typescript
 -   Webpack
--   Jest
+-   Jest @TODO
     -   To test the server
--   Nock
+-   Nock @TODO
     -   Mocking out HTTP requests on the server
 -   Fetch
     -   for requests from client to the server
+-   Mocha
+    -   Unit tests
+-   Chai
+    -   Assert framework for use with mocha
 
 ## Project Layout
 
-The project is laid out in 3 main parts
+The project is laid out in 4 main parts
 
 ### client
 
@@ -42,12 +46,21 @@ the server and the client, Models, utilities etc.
 
 This serves up client, as well as serving as an API layer than can be accessed without the UI
 
+### e2e test
+
+### test
+
+Unit tests
+
+this is the E2E tests for both the client and the server (API)
+
+
 ## Execution and Tests
 
 -   npm run start
     -   Will build the client and server and start the application
--   npm run test
-    -   Will run the jest tests on the server
+-   npm run mocha-test
+    -   Will run the mocha unit tests in any of the folders
 
 Once running the following urls can be hit
 
@@ -61,7 +74,7 @@ Once running the following urls can be hit
 ### Server Related (API)
 
 -   localhost:8080/basicapp/webapi
-    -   displays JSON giving the overall version of the application as defined in package.json.  Must pass
-    the correctauthtoken in the header.  Hardcoded in the validate token function.
+    -   displays JSON giving the overall version of the application as defined in package.json. Must pass
+        the correctauthtoken in the header. Hardcoded in the validate token function.
 
 ## Features

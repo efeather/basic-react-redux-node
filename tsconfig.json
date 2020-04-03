@@ -11,6 +11,6 @@
     "include": [
         "src/server/**/*.ts",
         "src/server/**/*.tsx",
-        "/src/common/**/*.ts"
+        "src/common/**/*.ts"
     ]
 }
