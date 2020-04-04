@@ -18,9 +18,9 @@ export const getDriver = ():WebDriver =>{
 };
 
 export const closeDriver = () =>{
-    getDriver()
-        .close()
-        .then(()=> driver = null)
+    if(driver) {
+        driver.close().then(() => driver = null)
+    }
 };
 
 
