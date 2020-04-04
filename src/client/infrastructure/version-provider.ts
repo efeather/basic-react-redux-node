@@ -13,5 +13,5 @@ export const fetchVersion = async (
 
     return await fetch(request)
         .then(response => response.json())
-        .then(data => data.version)
+        .then(data => data.feature)
 }

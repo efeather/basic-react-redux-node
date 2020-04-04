@@ -11,13 +11,12 @@
         "start": "npm run build && node ./dist/server/index.js",
         "test": "mocha -r ts-node/register src/test/unit/**/*.spec.ts",
         "e2e-test": "npm run e2e-test-api && npm run e2e-test-gui",
-        "e2e-test-api": "cucumber-js src/test/integration/features/**/*.feature --profile api",
-        "e2e-test-gui": "\"cucumber-js src/test/integration/features/**/*.feature --profile gui"
+        "e2e-test-api": "cucumber-js  --profile api",
+        "e2e-test-gui": "cucumber-js  --profile gui"
     },
     "dependencies": {
         "@types/compression": "^1.7.0",
         "@types/express": "github:types/express",
-        "axios": "^0.19.2",
         "compression": "^1.7.4",
         "express": "^4.17.1",
         "http-status-codes": "^1.4.0",

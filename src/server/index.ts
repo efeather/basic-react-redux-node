@@ -18,7 +18,7 @@ app.get(RoutePath.webAPI, (req: Request, res: Response) => {
     } else {
         res.json({
             name: packageJSON.name,
-            version: packageJSON.version,
+            version: packageJSON.feature,
         })
     }
 })
