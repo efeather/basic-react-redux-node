@@ -34,6 +34,7 @@
         "@types/react-router": "^5.1.4",
         "@types/selenium-webdriver": "^4.0.9",
         "chai": "^4.2.0",
+        "chromedriver": "^80.0.2",
         "connected-react-router": "^6.7.0",
         "cucumber": "^6.0.5",
         "cucumber-pretty": "^6.0.0",
