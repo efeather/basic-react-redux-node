@@ -3,7 +3,7 @@ import * as express from 'express'
 import * as path from 'path'
 import * as compression from 'compression'
 import { Request, Response } from 'express'
-
+const httpShutdown = require('http-shutdown')
 const HttpStatus = require('http-status-codes')
 const app = express()
 
@@ -38,13 +38,19 @@ app.use(RoutePath.base, clientRouter)
 
 const port = 8080
 console.log(`Starting on Port ${port}`)
-const server = app.listen(port, () => {
-    console.log(`Started on port ${port}`)
+const server = httpShutdown(
+    app.listen(port, () => {
+        console.log(`Started on port ${port}`)
 
-    process.on('SIGTERM', () => {
-        console.log(`Shutting down`)
-        server.close(() => {
-            console.log(`Server closed`)
+        process.on('SIGTERM', () => {
+            console.log(`Shutting down`)
+            server.close(() => {
+                console.log(`Server closed`)
+            })
         })
     })
-})
+)
+
+server.host = `http://localhost:${port}`
+
+module.exports = server

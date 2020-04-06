@@ -25,7 +25,7 @@ const store = createStore(
     composeWithDevTools(applyMiddleware(...middleware), ...enhancers)
 )
 
-window.reduxStore = store
+window.reduxStore = store //Used later to dump redux state in e2e tests
 
 const mountDOM: HTMLElement | null = document.getElementById('mount')
 ReactDOM.render(

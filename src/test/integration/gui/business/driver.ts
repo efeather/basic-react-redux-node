@@ -1,26 +1,26 @@
-import 'chromedriver';
-import { Builder, logging, WebDriver } from 'selenium-webdriver'
+import 'chromedriver'
+import { Builder, Capabilities, logging, WebDriver } from 'selenium-webdriver'
 
-let driver:WebDriver|null = null;
+let driver: WebDriver | null = null
 
-export const getDriver = ():WebDriver =>{
-    if(!driver){
-        const loggingPrefs:logging.Preferences = new logging.Preferences();
-        loggingPrefs.setLevel(logging.Type.BROWSER,logging.Level.ALL);
+export const getDriver = (): WebDriver => {
+    if (!driver) {
+        const loggingPrefs: logging.Preferences = new logging.Preferences()
+        loggingPrefs.setLevel(logging.Type.BROWSER, logging.Level.ALL)
 
         driver = new Builder()
             .forBrowser('chrome')
-            .withCapabilities(loggingPrefs)
-            .build();
+            .withCapabilities(
+                Capabilities.chrome().setLoggingPrefs(loggingPrefs)
+            )
+            .build()
     }
 
-    return driver;
-};
+    return driver
+}
 
-export const closeDriver = () =>{
-    if(driver) {
-        driver.close().then(() => driver = null)
+export const quitDriver = () => {
+    if (driver) {
+        driver.quit().then(() => (driver = null))
     }
-};
-
-
+}
