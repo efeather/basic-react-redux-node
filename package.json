@@ -1,4 +1,6 @@
 {
+    "description": "Fully funtiontioning express, react, redux application with unit and e2e tests stubbed app",
+    "author": "Eddie Feather",
     "name": "basic-react-redux-node",
     "version": "0.1.0",
     "private": true,
