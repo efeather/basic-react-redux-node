@@ -25,6 +25,7 @@ The following is what I used in this project.
 -   Chai
     -   Assert framework for use with mocha
 -   Cucumber
+-   Selenium
 
 ## Project Layout
 
