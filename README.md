@@ -70,7 +70,7 @@ Once running the following urls can be hit
 
 ### Server Related (API)
 
--   localhost:8080/basicapp/webapi
+-   localhost:8080/webapi
     -   displays JSON giving the overall version of the application as defined in package.json. Must pass
         the correctauthtoken in the header. Hardcoded in the validate token function.
 
