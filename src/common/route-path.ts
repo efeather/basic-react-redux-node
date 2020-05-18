@@ -4,7 +4,7 @@ export const RoutePath = new (class {
     }
 
     get webAPI(): string {
-        return `${this.base}/webapi`
+        return `/webapi`
     }
     get about(): string {
         return '/about'
