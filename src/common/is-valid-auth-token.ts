@@ -1,5 +1,5 @@
 export const isValidAuthToken = (
-    authorizationToken: string | null
+    authorizationToken: string | undefined
 ): boolean => {
     return (
         (authorizationToken &&

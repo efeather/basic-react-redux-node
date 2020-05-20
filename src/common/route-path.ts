@@ -9,4 +9,7 @@ export const RoutePath = new (class {
     get about(): string {
         return '/about'
     }
+    get test1(): string {
+        return `${this.webAPI}/test1`
+    }
 })()
