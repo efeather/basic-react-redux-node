@@ -10,8 +10,7 @@ module.exports = {
     devServer: {
         port: 8080,
         historyApiFallback: true,
-        index: 'index.html'
-
+        index: 'index.html',
     },
     output: {
         filename: '[name]bundle.js',
